@@ -20,6 +20,9 @@ const nextISSTimesForMyLocation = () => {
   .then(fetchCoordsByIP)
   .then(fetchISSFlyOverTimes)
   .then(printPassTimes)
+  .catch((error) => {
+    console.log("It didn't work: ", error.message);
+  });
 };
 
 const printPassTimes = (body) => {

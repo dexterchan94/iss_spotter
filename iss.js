@@ -80,7 +80,6 @@ const nextISSTimesForMyLocation = (callback) => {
         
         for (time of times) {
           let date = new Date(time.risetime * 1000);
-          let utcString = date.toUTCString();
           let localString = date.toLocaleString("en-US", {timeZone: "America/Vancouver", timeZoneName: "short"});
           console.log(`Next pass at ${localString} for ${time.duration} seconds!`);
         } 
